@@ -1,21 +1,70 @@
-# Jupyter
-.ipynb_checkpoints/
-*.pyc
+# ─── Python ──────────────────────────────────────────────────
 __pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
 
-# OS
-.DS_Store
-Thumbs.db
+# ─── Virtual environments ────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+.env
 
-# Python
+# ─── Jupyter ─────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_temp
+
+# ─── Distribution / packaging ────────────────────────────────
+build/
+dist/
 *.egg-info/
 *.egg
-dist/
-build/
-.env
-venv/
-.venv/
+.eggs/
 
-# IDE
+# ─── Large / sensitive data files ────────────────────────────
+# Raw Excel files are tracked; exclude any CSVs exported from
+# private or sensitive sources that should not be in version control.
+# data/private/
+# *.csv          <-- NOT ignored; processed CSVs are part of the repo
+
+# Exclude large binary model artefacts
+*.pkl
+*.joblib
+*.h5
+*.onnx
+
+# ─── OS artefacts ────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ─── IDE / editor ────────────────────────────────────────────
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ─── Testing & coverage ──────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+.tox/
+
+# ─── Secrets ─────────────────────────────────────────────────
+.env
+.env.*
+secrets.json
+credentials.json
