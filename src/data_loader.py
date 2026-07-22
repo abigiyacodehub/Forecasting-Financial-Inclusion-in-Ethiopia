@@ -7,6 +7,7 @@ unified dataset and reference codes.
 
 import pandas as pd
 from pathlib import Path
+from typing import Optional, Union
 
 
 # ---------------------------------------------------------------------------
@@ -21,7 +22,7 @@ PROCESSED_DIR = DATA_DIR / "processed"
 # Loaders
 # ---------------------------------------------------------------------------
 
-def load_unified_data(path: str | Path | None = None) -> pd.DataFrame:
+def load_unified_data(path: Optional[Union[str, Path]] = None) -> pd.DataFrame:
     """Load the unified Ethiopia FI dataset (CSV or XLSX).
 
     Parameters
@@ -72,7 +73,7 @@ def load_unified_data(path: str | Path | None = None) -> pd.DataFrame:
     return df
 
 
-def load_reference_codes(path: str | Path | None = None) -> pd.DataFrame:
+def load_reference_codes(path: Optional[Union[str, Path]] = None) -> pd.DataFrame:
     """Load the reference codes lookup table.
 
     Parameters

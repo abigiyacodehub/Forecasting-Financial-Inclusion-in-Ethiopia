@@ -6,7 +6,7 @@
 
 ## Project Overview
 
-Ethiopia's financial inclusion story is one of rapid but uneven progress.  Account ownership grew from **22 % (2014) → 35 % (2017) → 46 % (2021) → 49 % (2024)**, yet a 3-percentage-point gain over 2021–2024 sits alongside the explosive rise of Telebirr (launched May 2021) and the entry of Safaricom/M-Pesa (August 2023).  Understanding *why* growth slowed — and what will drive it next — requires linking quantitative indicators to their causal events.
+Ethiopia's financial inclusion story is one of rapid but uneven progress.  Account ownership grew from **22 % (2011) → 22 % (2014) → 35 % (2017) → 46 % (2021) → 49 % (2024)**, yet a 3-percentage-point gain over 2021–2024 sits alongside the explosive rise of Telebirr (launched May 2021) and the entry of Safaricom/M-Pesa (August 2023).  Understanding *why* growth slowed — and what will drive it next — requires linking quantitative indicators to their causal events.
 
 This project builds that link using a **unified schema** that stores observations, events, targets, and causal impact_links in a single dataset, then applies forecasting techniques suited to limited, sparse time-series data.
 

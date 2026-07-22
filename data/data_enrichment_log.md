@@ -3,7 +3,7 @@
 **Enriched file:** `data/processed/ethiopia_fi_enriched.csv`  
 **Base dataset:** `data/raw/ethiopia_fi_unified_data.xlsx`  
 **Base record count:** 43  
-**Enrichment batch:** Week 11 Interim Submission  
+**Enrichment batch:** Week 11 Final Submission  
 **Records added:** 12  
 **Total after enrichment:** 55  
 
@@ -27,6 +27,23 @@ One row per added record. All rows carry the five required provenance fields plu
 | ENC_0010   | impact_link  | USAGE         | USG_MM_VOLUME       | *(n/a)*       | *(n/a)*                | *(n/a)*         | Telebirr / Ethiopian Telecom         | regulator   | https://telebirr.com/                                                                            | medium     | Abigiya_Trainee   | 2025-07-19      | *(NBE directive enabled Telebirr expansion; by Dec 2023 Telebirr reported 40M+ registered subscribers and growing P2P volume)*                        | Connects the Telebirr scale-up to usage growth; Telebirr is the single largest driver of mobile money volume in Ethiopia.                                              |
 | ENC_0011   | impact_link  | GENDER        | GEN_ACCOUNT_OWN     | *(n/a)*       | *(n/a)*                | *(n/a)*         | ID4Africa / World Bank Fayda         | literature  | https://id4africa.com/2025/                                                                      | medium     | Abigiya_Trainee   | 2025-07-19      | *(synthesised from Rwanda and Kenya precedents: national digital ID programmes reduced gender gap in account ownership by 3–5 pp within 2 years)*      | Women disproportionately lack formal ID; Fayda biometric enrolment is expected to reduce this barrier and narrow the gender account gap.                               |
 | ENC_0012   | impact_link  | GENDER        | GEN_MM_SHARE        | *(n/a)*       | *(n/a)*                | *(n/a)*         | NBE / GSMA                          | regulator   | https://nbebank.com/directives/                                                                  | medium     | Abigiya_Trainee   | 2025-07-19      | *(synthesised: simplified KYC disproportionately benefits women who lack utility bills or formal proof of address required by full KYC)*               | Connects KYC directive to female mobile money account share (14% baseline); enables scenario modelling toward the 50% gender parity target.                           |
+
+---
+
+## Note on Base-Row Nulls
+
+When `data/processed/ethiopia_fi_enriched.csv` is inspected as a whole, the columns
+`source_url`, `collected_by`, and `collection_date` show nulls — **these nulls belong
+entirely to the 43 base rows** from `ethiopia_fi_unified_data.xlsx`, which pre-date this
+enrichment workflow and carry no provenance metadata.  All 12 ENC_ rows have every
+required field populated (confirmed by Check 3 in `scripts/generate_enriched_csv.py`).
+
+| Column            | Null count (total 55 rows) | Source of nulls      |
+|-------------------|---------------------------|----------------------|
+| `source_url`      | 12                        | Base rows only       |
+| `collected_by`    | 0 in ENC_ rows            | Base rows only       |
+| `collection_date` | 33                        | Base rows only       |
+| `confidence`      | 0                         | All rows populated   |
 
 ---
 
